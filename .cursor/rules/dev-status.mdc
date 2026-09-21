@@ -1,0 +1,21 @@
+---
+description: Keep plan.md and dev-status.md in sync with real implementation progress
+alwaysApply: true
+---
+
+# Architecture and status
+
+- `plan.md` is the architectural and product source of truth. Do not conflict with it.
+- The codebase is authoritative if it disagrees with `dev-status.md`. Correct the status file.
+- Do not rebuild completed work. Continue from the current state.
+
+# Update after every meaningful task
+
+After every meaningful implementation, verification, or discovery (not only at session end):
+
+1. Update `dev-status.md` immediately.
+2. Set Last Updated to the current local datetime.
+3. Mark items `[x]` only if verified (build, tests, and the main workflow). Use `[~]` for partial work.
+4. Record implemented files, tests, limitations, and the next logical task.
+
+Never leave `dev-status.md` describing a theoretical roadmap.
